@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'Yandex';
+    src: url(/Regular);
+}
+.header{
+    flex-direction: column;
+    background-image: url("./../../img/1.jpg");
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+}
+.block {
+    height: 90%;
+    width: 95ch;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.menu{
+
+
+}
+.afisha{
+    color: white;
+    font-family: Yandex;
+}
+.text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Yandex;
+}
+.textIn{
+    margin-bottom: 2ch;
+    height: 90%;
+    width: 95%;
+    color: white;
+}
+

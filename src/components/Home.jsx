@@ -13,9 +13,9 @@ function Home() {
             />
           </div>
           <div class="col-lg-5">
-            <h1 class="font-weight-light">Home page</h1>
+            <h1 class="font-weight-light"></h1>
             <p>
-              L
+              Тут мероприятия*
             </p>
           </div>
         </div>

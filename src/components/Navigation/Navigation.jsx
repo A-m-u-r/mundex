@@ -14,8 +14,15 @@ function Navigation() {
                     Афиша
                 </NavLink>
 
+                <div className={styles.wrapper}>
+                    <div className={styles.search_box}>
+                        <input type="text" placeholder="  Куда сходить?"/>
+                        <i className={styles.fasearch}></i>
+                    </div>
+                </div>
+
                 <div className={styles.menu}>
-                    <Menu menuButton={<MenuButton>Menu</MenuButton>} transition>
+                    <Menu menuButton={<MenuButton className={styles.roun} ></MenuButton>} transition>
                         <MenuItem><NavLink className="nav-link" to="/about">
                             Оценки
                             <span className="sr-only">(current)</span>

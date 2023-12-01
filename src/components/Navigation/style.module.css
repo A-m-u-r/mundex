@@ -1,8 +1,9 @@
 @font-face {
     font-family: 'Yandex';
-    src: url(/Regular);
+    src: url(../shrift/1.woff) format("woff2");
 }
 .header{
+    z-index: -1;
     flex-direction: column;
     background-image: url("./../../img/1.jpg");
     background-position: center;
@@ -10,27 +11,53 @@
     background-size: cover;
     justify-content: center;
     align-items: center;
+
+
 }
+
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 20vh;
 }
+.menu{
+    display: flex;
+    align-items: flex-start;
+
+}
+.roun{
+    background-image: url("./../../img/menu.png");
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    height: 4vh;
+    width: 4vh;
+    margin-right:5vh;
+    margin-top: 0.5ch;
+    border: 1px solid ;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 1;
+
+     /* Change it to transparent */
+    /* remove background-opacity */
+
+}
 .block {
+    padding-top: 1ch;
+    padding-left: 1ch;
     height: 90%;
-    width: 95ch;
+    width: 160ch;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.menu{
-
-
-}
 .afisha{
+    padding-left: 2ch;
     color: white;
     font-family: Yandex;
+    font-size: x-large;
 }
 .text{
     display: flex;
@@ -43,5 +70,53 @@
     height: 90%;
     width: 95%;
     color: white;
+}
+.wrapper {
+    width: 40%;
+    height: 5vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.search_box {
+    width: 100%;
+    position: relative;
+
+}
+.search_box input[type="text"] {
+    font-size: xx-small;
+    width: 100%;
+    padding: 2px;
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid white;
+    border-radius: 10px;
+    color: #fff;
+    outline: none;
+}
+.fasearch {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 25px;
+    color: #fff;
+    font-size: 25px;
+}
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #fff;
+}
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #fff;
+}
+:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #fff;
+}
+@media screen and (max-width: 425px) {
+    .search_box {
+        width: 95%;
+    }
 }
 

@@ -16,26 +16,29 @@ function Navigation() {
 
                 <div className={styles.wrapper}>
                     <div className={styles.search_box}>
-                        <input type="text" placeholder="  Куда сходить?"/>
+                        <input type="text" placeholder="  Куда сходить?" className={styles.input}/>
                         <i className={styles.fasearch}></i>
                     </div>
                 </div>
 
                 <div className={styles.menu}>
                     <Menu menuButton={<MenuButton className={styles.roun} ></MenuButton>} transition>
+                        <MenuItem><NavLink className="nav-link" to="/contact">
+                            Мероприятия
+                            <span className="sr-only">(current)</span>
+                        </NavLink></MenuItem>
+
+
                         <MenuItem><NavLink className="nav-link" to="/about">
                             Оценки
                             <span className="sr-only">(current)</span>
                         </NavLink></MenuItem>
 
-                        <MenuItem><NavLink className="nav-link" to="/">
-                            Мероприятия
-                            <span className="sr-only">(current)</span>
-                        </NavLink></MenuItem>
 
-                        <MenuItem> <NavLink className="nav-link" to="/contact">
-                            Портфолио
-                        </NavLink></MenuItem>
+
+                        <MenuItem> <NavLink className="nav-link" to="/">
+                        Портфолио
+                    </NavLink></MenuItem>
 
                     </Menu>
                 </div>

@@ -1,6 +1,10 @@
 @font-face {
-    font-family: 'Yandex';
-    src: url(../shrift/1.woff) format("woff2");
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-style: normal;
+    src:
+            url('../fonts/YandexSansText-Light.woff') format('woff2'),
+            url('../fonts/2.woff2') format('woff');
 }
 .header{
     z-index: -1;
@@ -14,12 +18,14 @@
 
 
 }
-
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 20vh;
+    margin-left: 15vw;
+    margin-right: 15vw;
+
 }
 .menu{
     display: flex;
@@ -31,22 +37,18 @@
     background-position: center;
     -webkit-background-size: cover;
     background-size: cover;
-    height: 4vh;
-    width: 4vh;
+    height: 5vh;
+    width: 5vh;
     margin-right:5vh;
     margin-top: 0.5ch;
     border: 1px solid ;
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0);
-    z-index: 1;
 
-     /* Change it to transparent */
-    /* remove background-opacity */
 
 }
 .block {
     padding-top: 1ch;
-    padding-left: 1ch;
     height: 90%;
     width: 160ch;
     display: flex;
@@ -54,22 +56,22 @@
     justify-content: space-between;
 }
 .afisha{
-    padding-left: 2ch;
     color: white;
-    font-family: Yandex;
+    font-family: 'Open Sans';
     font-size: x-large;
 }
 .text{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Yandex;
+    font-family: 'Open Sans';
 }
 .textIn{
     margin-bottom: 2ch;
     height: 90%;
     width: 95%;
     color: white;
+    margin-left: 15vw;
 }
 .wrapper {
     width: 40%;
@@ -82,6 +84,7 @@
 .search_box {
     width: 100%;
     position: relative;
+
 
 }
 .search_box input[type="text"] {
@@ -119,4 +122,7 @@
         width: 95%;
     }
 }
-
+.input{
+    height: 6ch;
+    margin-top: 1ch;
+}

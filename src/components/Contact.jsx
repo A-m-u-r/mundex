@@ -1,6 +1,6 @@
 import React from "react";
 
-function Home() {
+function Contact() {
   return (
     <div className="home">
       <div class="container">
@@ -15,7 +15,7 @@ function Home() {
           <div class="col-lg-5">
             <h1 class="font-weight-light"></h1>
             <p>
-              Тут мероприятия*
+              Тут портфолио
             </p>
           </div>
         </div>
@@ -24,4 +24,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Contact;

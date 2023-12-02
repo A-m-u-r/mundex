@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import Get from "../Get";
 import styles from "./style.module.css"
 import {start} from "../d";
-function Contact() {
+function Home() {
     const [bloc, setBloc] = useState();
 
   return (
@@ -12,4 +12,4 @@ function Contact() {
   );
 }
 
-export default Contact;
+export default Home;

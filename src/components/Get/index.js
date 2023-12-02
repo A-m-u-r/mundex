@@ -18,8 +18,8 @@ function Get() {
                 <div key={employee.id} className={styles.block}>
                     <div className={styles.name}>{employee.name}</div>
                     <div className={styles.place}>{employee.place}</div>
-                    <div className={styles.time}>{employee.date_start}</div>
-                    <div className={styles.time}>{employee.time_start}</div>
+                    <div className={ styles.time }>{ employee.date_start }</div>
+                    <div className={ styles.time }>{ employee.time_start}</div>
                 </div>
             );
         })}

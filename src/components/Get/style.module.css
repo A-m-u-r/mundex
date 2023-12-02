@@ -1,0 +1,21 @@
+.main{
+    display: flex;
+    width: 90vh;
+
+}
+.block{
+    margin: 2vh;
+}
+.name{
+    color: black;
+    font-size: medium ;
+}
+.place{
+    color: #929292;
+    font-size: x-small;
+}
+.time{
+    color: #727272;
+    font-size: small;
+
+}

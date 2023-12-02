@@ -1,6 +1,13 @@
 import React from "react";
-
+import Get from "./Get";
 function Contact() {
+ // fetch('http://example.com/movies.json')
+ //     .then((response) => {
+ //       return response.json();
+ //     })
+ //     .then((data) => {
+ //       console.log(data);
+ //     });
   return (
     <div className="contact">
       <div class="container">
@@ -14,6 +21,7 @@ function Contact() {
           </div>
           <div class="col-lg-5">
             <h1 class="font-weight-light"></h1>
+              <Get/>
             <p>
               У тебя нет портофлио, дурачёк)
             </p>

@@ -1,4 +1,5 @@
 import React from "react";
+import {CreateItems} from "./Create";
 
 function About() {
   return (
@@ -15,6 +16,7 @@ function About() {
           <div class="col-lg-5">
             <h1 class="font-weight-light"></h1>
             <p>
+
               Зачем зашел сюда? Ты все равно выйдешь на сессию)
             </p>
           </div>

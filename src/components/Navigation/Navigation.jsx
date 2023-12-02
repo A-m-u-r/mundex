@@ -4,6 +4,7 @@ import {Menu, MenuItem, MenuButton} from '@szhsin/react-menu';
 import '@szhsin/react-menu/dist/index.css';
 import '@szhsin/react-menu/dist/transitions/slide.css';
 import styles from "./style.module.css"
+import Month from "../Month";
 
 
 function Navigation() {
@@ -45,7 +46,8 @@ function Navigation() {
             </div>
         </div>
         <div className={styles.text}> <div className={styles.textIn}>Мероприятия <br/> от студентов - студентам <br/> И не только</div> </div>
-    </div>);
+    </div>
+    );
 }
 
 export default Navigation;

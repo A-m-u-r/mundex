@@ -4,11 +4,9 @@ import styles from "./style.module.css";
 function Footer() {
   return (
     <div>
-      <footer>
+      <footer className={styles.footer}>
         <div>
-          <p>
             Copyright &copy; Mundex
-          </p>
         </div>
       </footer>
     </div>

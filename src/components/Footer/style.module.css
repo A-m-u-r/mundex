@@ -1,6 +1,5 @@
 .footer {
-    background-color: black;
-    position: fixed;
+    background-color: #929292;
     right: 0;
     bottom: 0;
     text-align: center;
@@ -8,5 +7,5 @@
     font-size: 19px;
     font-weight: bold;
     color: white;
-
+    margin: 0;
 }

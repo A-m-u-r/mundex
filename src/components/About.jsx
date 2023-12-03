@@ -1,11 +1,9 @@
 import React from "react";
-import Form from "./Form";
+import Create from "./Create";
 function About() {
   return (
     <div className="about">
-      <Form/>
-
-
+      <Create/>
     </div>
   );
 }

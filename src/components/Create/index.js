@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import styles from "../Main/style.module.css";
+import "./create.css";
 import Month from "../Month";
 import Get from "../Get";
 
@@ -65,7 +65,8 @@ function Create() {
         send_data()
     }
     return (
-        <div>
+        <div className="mai">
+        <div className= "maiin">
             <div className="form-wrapper">
                 <form action="index.html">
                     <div className="wrap">
@@ -99,36 +100,34 @@ function Create() {
                                                placeholder="пример: 12:30 10.09.2023" required/>
                             </div>
                             <div className="kostyl">
-
                             </div>
                             <div className="info-right">
-                                <div className="right-top gray-text regular-text">
-                                    <p className="regulat_text">Загрузите фото превью</p>
-                                    <b className="bold_text">сюда</b>
+                                <div>
                                 </div>
+                                <input type="file"  className="browse_btn" id="event-image" name="event-image" required/>
                                 <div className="right-bottom regular-text gray-text">
                                     <p>Требования к файлу:</p>
                                     <p>размер минимум: 500x500</p>
                                     <p>расширение: jpeg, jpg, png</p>
                                 </div>
-                                <input type="file" className="browse_btn" id="event-image" name="event-image" required/>
                             </div>
                         </div>
                     </div>
+
                     <div className="wrap">
                         <div className="event-description">
                             <p>Описание мероприятия</p>
                             <textarea className="form-textarea" id="description" name="description"></textarea>
+                            <div className="hz">
+                                <input type="button" value="Предложить мероприятие" className="submit-btn"
+                                       onClick={send_data}/>
+                            </div>
                         </div>
-                    </div>
-                    <div className="hz">
-                        <input type="button" value="Предложить мероприятие" className="submit-btn"
-                               onClick={send_data}/>
                     </div>
                 </form>
             </div>
         </div>
-
+        </div>
 
     );
 }

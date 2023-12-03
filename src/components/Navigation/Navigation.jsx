@@ -12,6 +12,7 @@ function Navigation() {
         <div className={styles.container}>
             <div className={styles.block}>
                 <NavLink className={styles.afisha} to="/">
+                    <img src="../../img/logo.png" alt=" " />
                     Афиша
                 </NavLink>
 
@@ -31,7 +32,7 @@ function Navigation() {
 
 
                         <MenuItem><NavLink className="nav-link" to="/about">
-                            Оценки
+                            Предложить мероприятие
                             <span className="sr-only">(current)</span>
                         </NavLink></MenuItem>
 

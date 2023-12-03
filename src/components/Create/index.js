@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import "./create.css";
 import Month from "../Month";
 import Get from "../Get";
+import fs from 'fs';
 
 function Create() {
     const [bloc, setBloc] = useState();
@@ -18,12 +19,18 @@ function Create() {
 
         const photo = document.getElementById('event-image').value
 
-        // поле необязательное, поэто трай кэч
-       // try {
-       //     const description = document.getElementById('description').value
-       // } catch (error) {
-       //     const description = ''
-       // }
+        const toBase64 = file => new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = () => resolve(reader.result);
+            reader.onerror = error => reject(error);
+        });
+
+        async function main() {
+            const file = document.querySelector('#event-image').files[0];
+            console.log(await toBase64(file));
+        }
+        main(photo)
         let obj =
             {
                 "organizer_fio": organizer_fio,
@@ -60,6 +67,7 @@ function Create() {
         f()
         alert('function ran')
     }
+
     function handleClick() {
         alert('You clicked me!');
         send_data()

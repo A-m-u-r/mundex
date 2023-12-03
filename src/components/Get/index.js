@@ -5,7 +5,7 @@ import styles from "./style.module.css"
 function Get() {
     const [items, setItems] = useState(start);
     useEffect(() => {
-        fetch('http://158.160.129.2/api/v1/events')
+        fetch('http://158.160.129.2/api/v1/events/?verified=all')
             .then((res) => res.json())
             .then((result) => setItems(result));
    }, []);

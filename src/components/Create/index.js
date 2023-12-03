@@ -12,19 +12,18 @@ function Create() {
         const organizer_fio = document.getElementById('fio').value
         const organizer_phone = document.getElementById('phone-num').value
         const organizer_socials = document.getElementById('social-link').value
-        const event_type = document.getElementById('event_type').value
-
-        const date_start = document.getElementById('event-time').value.split("")[1]
-        const time_start = document.getElementById('social-link').value.split("")[0]
+        const event_type = "gbnm"
+        const date_start =  document.getElementById('event-time').value.split("")[1]
+        const time_start =  document.getElementById('social-link').value.split("")[0]
 
         const photo = document.getElementById('event-image').value
 
         // поле необязательное, поэто трай кэч
-        try {
-            const description = document.getElementById('description').value
-        } catch (error) {
-            const description = ''
-        }
+       // try {
+       //     const description = document.getElementById('description').value
+       // } catch (error) {
+       //     const description = ''
+       // }
         let obj =
             {
                 "organizer_fio": organizer_fio,
@@ -49,7 +48,7 @@ function Create() {
             }
         let f = async function()
         {
-            let response = await fetch('http://158.160.129.2/api/v1/events/?verified=all', headers);
+            let response = await fetch('http://158.160.129.2/api/v1/add-event-non-auth/', headers);
             let result = await response.json();
             // alert(result);
 
@@ -58,7 +57,7 @@ function Create() {
                 console.log(key)
             }
         }
-        f().then(r => {})
+        f()
         alert('function ran')
     }
     function handleClick() {
@@ -123,9 +122,8 @@ function Create() {
                         </div>
                     </div>
                     <div className="hz">
-                        <input type="submit" value="Предложить мероприятие" className="submit-btn"
-                               onClick="send_data()"/>
-                        <button onClick={handleClick}>Click me</button>
+                        <input type="button" value="Предложить мероприятие" className="submit-btn"
+                               onClick={send_data}/>
                     </div>
                 </form>
             </div>

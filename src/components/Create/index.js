@@ -3,6 +3,7 @@ import "./create.css";
 import Month from "../Month";
 import Get from "../Get";
 import fs from 'fs';
+import {compareArraysAsSet} from "@testing-library/jest-dom/dist/utils";
 
 function Create() {
     const [bloc, setBloc] = useState();
@@ -16,21 +17,21 @@ function Create() {
         const event_type = "gbnm"
         const date_start =  document.getElementById('event-time').value.split("")[1]
         const time_start =  document.getElementById('social-link').value.split("")[0]
-
+        const place = "TyumGU"
         const photo = document.getElementById('event-image').value
 
-        const toBase64 = file => new Promise((resolve, reject) => {
-            const reader = new FileReader();
-            reader.readAsDataURL(file);
-            reader.onload = () => resolve(reader.result);
-            reader.onerror = error => reject(error);
-        });
-
-        async function main() {
-            const file = document.querySelector('#event-image').files[0];
-            console.log(await toBase64(file));
-        }
-        main(photo)
+        //const toBase64 = file => new Promise((resolve, reject) => {
+        //    const reader = new FileReader();
+        //    reader.readAsDataURL(file);
+        //    reader.onload = () => resolve(reader.result);
+        //    reader.onerror = error => reject(error);
+        //});
+        //
+        //async function main() {
+        //    const file = document.querySelector('#event-image').files[0];
+        //    console.log(await toBase64(file));
+        //}
+        //main(photo)
         let obj =
             {
                 "organizer_fio": organizer_fio,
@@ -41,7 +42,8 @@ function Create() {
                 "event_type": event_type,
                 "date_start": date_start,
                 "time_start": time_start,
-                "photo": photo
+                "photo": photo,
+                "place": place
             }
 
         let headers =
@@ -55,7 +57,7 @@ function Create() {
             }
         let f = async function()
         {
-            let response = await fetch('http://158.160.129.2/api/v1/add-event-non-auth/', headers);
+            let response = await fetch('http://158.160.129.2/api/v1/events/', headers);
             let result = await response.json();
             // alert(result);
 
@@ -112,7 +114,7 @@ function Create() {
                             <div className="info-right">
                                 <div>
                                 </div>
-                                <input type="file"  className="browse_btn" id="event-image" name="event-image" required/>
+                                <input type="text"  className="browse_btn" id="event-image" name="event-image" required/>
                                 <div className="right-bottom regular-text gray-text">
                                     <p>Требования к файлу:</p>
                                     <p>размер минимум: 500x500</p>

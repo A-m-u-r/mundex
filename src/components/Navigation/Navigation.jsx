@@ -12,13 +12,12 @@ function Navigation() {
         <div className={styles.container}>
             <div className={styles.block}>
                 <NavLink className={styles.afisha} to="/">
-                    <img src="../../img/logo.png" alt=" " />
                     Афиша
                 </NavLink>
 
                 <div className={styles.wrapper}>
                     <div className={styles.search_box}>
-                        <input type="text" placeholder="  Куда сходить?" className={styles.input}/>
+                        <input type="text" placeholder="  Куда сходить?" className={styles.input} />
                         <i className={styles.fasearch}></i>
                     </div>
                 </div>
@@ -29,7 +28,6 @@ function Navigation() {
                             Мероприятия
                             <span className="sr-only">(current)</span>
                         </NavLink></MenuItem>
-
 
                         <MenuItem><NavLink className="nav-link" to="/about">
                             Предложить мероприятие

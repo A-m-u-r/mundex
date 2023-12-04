@@ -19,7 +19,7 @@ function Get() {
                 return (
                     <div key={employee.id} className={styles.block}>
                         <div className={styles.img}>
-                            <img className={styles.imgg} src={url + employee.photo} alt={" "}/>
+                            <img className={styles.imgg} src={employee.photo} alt={" "}/>
                         </div>
                         <div className={styles.name}>{employee.name}</div>
                         <div className={styles.place}>{employee.place}</div>

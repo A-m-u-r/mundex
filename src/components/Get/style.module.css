@@ -5,27 +5,29 @@
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
-    margin-left: 15vw;
+    margin-left: 23vw;
     margin-right: 15vw;
 }
 .block{
+    overflow: hidden;
     margin-top: 2vh;
-    width: 15vw;
+    width: 20vw;
 }
 .imgg{
     width: 90%;
+    height: 100%
 }
 .name{
     color: black;
-    font-size: medium ;
+    font-size: x-large;
 }
 .place{
     color: #929292;
-    font-size: x-small;
+    font-size: large;
 }
 .time{
     color: #727272;
-    font-size: small;
+    font-size: large;
     display: inline-flex;
     border: 1px solid #727272;
     float: left;
@@ -36,4 +38,11 @@
     padding-left: 0.8vw;
     padding-top: 0.1vw;
     padding-bottom: 0.1vw;
+}
+@media screen and (max-width: 495px) {
+    .block{
+        margin-top: 2vh;
+        width: 30vw;
+
+    }
 }
